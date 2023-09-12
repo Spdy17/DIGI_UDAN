@@ -1,0 +1,79 @@
+{{> header}}
+
+
+
+
+
+
+<div class="container-fluid reg-sign-section ">
+    <div class="row " id="update_profile">
+<div class="row col-sm-3 small"> <h5>Name -  {{name }}</b></h5></div>
+<div class="row col-sm-3 small"><h5>Course Type is -  {{cmodule }}</b></h5></div>
+<div class="row col-sm-3 small"><h5>Total referral is :- {{total_ref}}</b></h5></div>
+<div class="row col-sm-3 small"><h5>Update Profile</b></h5></div>
+    </div>
+    <div class="row">
+        <div class="row col-sm-9">
+
+            <div id="myDIV">
+               
+                
+                {{!-- <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+                    preload="none" width="640" height="360" poster="" data-setup="{}">
+                    <source id="source_video" src="css/sample.mp4" type='video/mp4' />
+                </video> --}}
+
+            </div>
+
+
+        </div>
+
+        <div class="row col-sm-3">
+            {{!-- sample videos buttons--}}
+            <button onclick="myFunction1()" id="vidbutton">Video 5</button>
+            <button onclick="myFunction2()" id="vidbutton">Video 6</button>
+            <button onclick="myFunction3()" id="vidbutton">Video 7</button>
+            <button onclick="myFunction4()" id="vidbutton">Video 8</button>
+            {{!-- sample buttons for color div --}}
+            {{!-- <button onclick="myFunction1()" id="vidbutton">Blue</button>
+            <button onclick="myFunction2()" id="vidbutton">Green</button>
+            <button onclick="myFunction3()" id="vidbutton">Yellow</button>
+            <button onclick="myFunction4()" id="vidbutton">Pink</button>
+            <button onclick="myFunction5()" id="vidbutton">Black</button> --}}
+            {{!-- sample videos JS --}}
+            <script>
+                function myFunction1() { document.getElementById("myDIV").style.backgroundColor = "blue";}
+                function myFunction2() { document.getElementById("myDIV").style.backgroundColor = "green"; }
+                function myFunction3() { document.getElementById("myDIV").style.backgroundColor = "yellow"; }
+                function myFunction4() { document.getElementById("myDIV").style.backgroundColor = "pink"; }
+            </script>
+            {{!-- sample js for color div --}}
+            {{!--
+            <script>
+                function myFunction1() { document.getElementById("myDIV").style.backgroundColor = "blue"; }
+                function myFunction2() { document.getElementById("myDIV").style.backgroundColor = "green"; }
+                function myFunction3() { document.getElementById("myDIV").style.backgroundColor = "yellow"; }
+                function myFunction4() { document.getElementById("myDIV").style.backgroundColor = "pink"; }
+                function myFunction5() { document.getElementById("myDIV").style.backgroundColor = "black"; }
+            </script> --}}
+
+        </div>
+
+
+
+        {{!-- <div class="container reg-sign-box" data-aos="zoom-in-right" data-aos-duration="1000">
+            <h1>Course Type - <b> {{cmodule }}</b></h1>
+            <h1>Welcome Back - <b> {{name }}</b></h1>
+        </div> --}}
+    </div>
+</div>
+
+<script>
+function myFunction() {
+  alert("Welcone {{name}}");
+}
+</script>
+{{!-- {{> footer }} --}}
+{{> footer }}
+
+

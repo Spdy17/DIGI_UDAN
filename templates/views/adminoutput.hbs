@@ -1,0 +1,60 @@
+{{> header }}
+
+
+
+
+
+
+<div class="container-fluid reg-sign-section pt-5">
+    <div class="row" id="admin_heading">
+
+        <div class="row col-sm-6" id="user_data">
+            <h1>User Data</h1>
+
+
+            <table style="width:100%">
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Coursemodule</th>
+                    <th>Referral Used</th>
+                    <th>Total Referral</th>
+                    {{!-- <th>Total Reffered</th> --}}
+                </tr>
+                {{#each x}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.phone}}</td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.coursemodule}}</td>
+                    <td>{{this.referral}}</td>
+                    <td>{{this.total_referral}}</td>
+                    {{!-- <td>{{this.refid}}</td> --}}
+                </tr>
+                {{/each}}
+
+            </table>
+        </div>
+        <div class="row col-sm-6">
+            <div class="row col-sm-6" id="course_details">
+
+                <h1>Courses</h1>
+                <div class="row col-sm-12">
+                    <button type="button "  class="btn btn-warning">Total course sold:- <b>  {{totalsold}} </b></button>
+                    <button type="button "  class="btn btn-primary">Pro:-<b>{{countpro}}</b></button>
+                    <button type="button "  class="btn btn-success">Inter:-<b>{{countinter}}</b></button>
+                    <button type="button "  class="btn btn-info">Beginner:-<b>{{countbeginner}}</b></button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+
+{{!-- {{> footer }} --}}
