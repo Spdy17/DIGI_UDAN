@@ -130,11 +130,11 @@ app.get("/pay", async (req, res) => {
 
       const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
 
-      res.redirect(https://www.digiudan.com/)
+      res.redirect("https://www.digiudan.com/")
 
     })
     .catch(function (response) {
-       res.redirect(https://www.google.com/)
+       res.redirect("https://www.google.com/")
     });
 })
 
