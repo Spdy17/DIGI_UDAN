@@ -128,13 +128,13 @@ app.get("/pay", async (req, res) => {
   axios.request(options)
     .then(function (response) {
 
-      const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
-
-      res.redirect("https://www.digiudan.com/")
+        const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
+      console.log(paymentUrl);
+      res.redirect(paymentUrl)
 
     })
-    .catch(function (response) {
-       res.redirect("https://www.google.com/")
+   .catch(function (error) {
+      console.log(error);
     });
 })
 
