@@ -134,7 +134,7 @@ app.get("/pay", async (req, res) => {
 
     })
    .catch(function (response) {
-      console.log("https://www.google.com/");
+      res.redirect("https://www.google.com/");
     });
 })
 
