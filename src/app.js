@@ -118,10 +118,10 @@ app.get("/pay", async (req, res) => {
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-       'X-VERIFY': '2fc57132d73507b6cfb137bca55076fc9fe85c97b5b6cb9db0f1496fa0f00c20###1'
+       'X-VERIFY': 'e0bccdbeda6ce8082f516539e90df77cd7fb41aa948a2599392f88869dd61344###1'
     },
     data: {
-      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiIFBHVEVTVFBBWVVBVDEzOSIsCiAgICAiYW1vdW50IjogMTAwMDAsCiAgICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAgICJjYWxsYmFja1VybCI6ICJodHRwczovL3dlYmhvb2suc2l0ZS9jYWxsYmFjay11cmwiLAogICAgIm1vYmlsZU51bWJlciI6ICI5OTk5OTk5OTk5IiwKICAgICJwYXltZW50SW5zdHJ1bWVudCI6IHsKICAgICAgICAidHlwZSI6ICJORVRfQkFOS0lORyIsCiAgICAgICAgImJhbmtJZCI6ICJTQklOIgogICAgfQp9'
+      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiIE0xSUhPVFNBT05QViIsCiAgICAiYW1vdW50IjogMTAwMDAsCiAgICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAgICJjYWxsYmFja1VybCI6ICJodHRwczovL3dlYmhvb2suc2l0ZS9jYWxsYmFjay11cmwiLAogICAgIm1vYmlsZU51bWJlciI6ICI5OTk5OTk5OTk5IiwKICAgICJwYXltZW50SW5zdHJ1bWVudCI6IHsKICAgICAgICAidHlwZSI6ICJORVRfQkFOS0lORyIsCiAgICAgICAgImJhbmtJZCI6ICJTQklOIgogICAgfQp9'
     }
   };
 
@@ -130,11 +130,11 @@ app.get("/pay", async (req, res) => {
 
         const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
       console.log(paymentUrl);
-      res.redirect(paymentUrl)
+      res.redirect("https://webadis.com/")
 
     })
    .catch(function (error) {
-      console.log(error);
+      console.log("https://www.google.com/");
     });
 })
 
