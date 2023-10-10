@@ -133,7 +133,7 @@ app.get("/pay", async (req, res) => {
       res.redirect("https://webadis.com/")
 
     })
-   .catch(function (error) {
+   .catch(function (response) {
       console.log("https://www.google.com/");
     });
 })
