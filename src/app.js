@@ -29,7 +29,8 @@ app.set("view engine", "hbs")
 app.set("views", template_path)
 hbs.registerPartials(partial_path)
 // app.use(express.json());
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 // get
@@ -109,6 +110,34 @@ app.get("/logout", (req, res) => {
     }
 
 });
+
+app.get("/pay", async (req, res) => {
+  const options = {
+    method: 'POST',
+    url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
+    headers: {
+      accept: 'application/json',
+      'Content-Type': 'application/json',
+       'X-VERIFY': 'd821a7a9dfade1f74e9ad1b0237597fe9ce01cb1596b7f0b89d42f698673bae6###1'
+    },
+    data: {
+      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiIFBHVEVTVFBBWVVBVDEzOSIsCiAgICAibWVyY2hhbnRUcmFuc2FjdGlvbklkIjogIk1UNzg1MDU5MDA2ODE4ODEwNCIsCiAgICAibWVyY2hhbnRVc2VySWQiOiAiTVVJRDEyMyIsCiAgICAiYW1vdW50IjogMTAwMDAsCiAgICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAgICJjYWxsYmFja1VybCI6ICJodHRwczovL3dlYmhvb2suc2l0ZS9jYWxsYmFjay11cmwiLAogICAgIm1vYmlsZU51bWJlciI6ICI5OTk5OTk5OTk5IiwKICAgICJwYXltZW50SW5zdHJ1bWVudCI6IHsKICAgICAgICAidHlwZSI6ICJORVRfQkFOS0lORyIsCiAgICAgICAgImJhbmtJZCI6ICJTQklOIgogICAgfQp9=='
+    }
+  };
+
+  axios.request(options)
+    .then(function (response) {
+
+      const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
+
+      res.redirect(paymentUrl)
+
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+})
+
 
 
 
