@@ -113,15 +113,15 @@ app.get("/logout", (req, res) => {
 
 app.get("/pay", async (req, res) => {
   const options = {
-    method: 'POST',
-    url: 'https://developer.phonepe.com/v1/reference/pay-api#pay-request-for-web-flow',
+    method: 'GET',
+    url: 'https://api-preprod.phonepe.com/apis/hermes/pg/v1/options/merchantId?includeNetBankingBanksList=true',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-       'X-VERIFY': '8daf533f44a5eeebc7e19af25fc052d33ca9a0adfde6433de8ccf71fb35b57a1###1'
+       'X-VERIFY': '52617238bfaefe6014cf387a010d27c16dcdb4c6ceff4a7393c7a0f4f477bfad###1'
     },
     data: {
-      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiUEdURVNUUEFZVUFUMTM5IiwKICAgICJtZXJjaGFudFRyYW5zYWN0aW9uSWQiOiAiTVQ3ODUwNTkwMDY4MTg4MTA0IiwKICAgICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTIzIiwKICAgICJhbW91bnQiOiAxMDAwMCwKICAgICJyZWRpcmVjdFVybCI6ICJodHRwczovL3d3dy5nb29nbGUuY29tLyIsCiAgICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAgICJjYWxsYmFja1VybCI6ICJodHRwczovL3dlYmhvb2suc2l0ZS9jYWxsYmFjay11cmwiLAogICAgIm1vYmlsZU51bWJlciI6ICI5OTk5OTk5OTk5IiwKICAgICJwYXltZW50SW5zdHJ1bWVudCI6IHsKICAgICAgICAidHlwZSI6ICJORVRfQkFOS0lORyIsCiAgICAgICAgImJhbmtJZCI6ICJTQklOIiwKICAgICAgICAiYWNjb3VudENvbnN0cmFpbnRzIjogewogICAgICAgICAgICAiYWNjb3VudE51bWJlciI6ICI0MjAyMDAwMDE4OTIiLAogICAgICAgICAgICAiaWZzYyI6ICJJQ0lDMDAwMDA0MSIKICAgICAgICB9CiAgICB9Cn0='
+      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiUEdURVNUUEFZVUFUMTM5IiwKICAgICJtZXJjaGFudFRyYW5zYWN0aW9uSWQiOiAiTVQ3ODUwNTkwMDY4MTg4MTA0IiwKICAgICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTIzIiwKICAgICJhbW91bnQiOiAxMDAwMCwKICAgICJyZWRpcmVjdFVybCI6ICJodHRwczovL3dlYmhvb2suc2l0ZS9yZWRpcmVjdC11cmwiLAogICAgInJlZGlyZWN0TW9kZSI6ICJSRURJUkVDVCIsCiAgICAiY2FsbGJhY2tVcmwiOiAiaHR0cHM6Ly93ZWJob29rLnNpdGUvY2FsbGJhY2stdXJsIiwKICAgICJtb2JpbGVOdW1iZXIiOiAiOTk5OTk5OTk5OSIsCiAgICAicGF5bWVudEluc3RydW1lbnQiOiB7CiAgICAgICAgInR5cGUiOiAiTkVUX0JBTktJTkciLAogICAgICAgICJiYW5rSWQiOiAiU0JJTiIsCiAgICAgICAgImFjY291bnRDb25zdHJhaW50cyI6IHsKICAgICAgICAgICAgImFjY291bnROdW1iZXIiOiAiNDIwMjAwMDAxODkyIiwKICAgICAgICAgICAgImlmc2MiOiAiSUNJQzAwMDAwNDEiCiAgICAgICAgfQogICAgfQp9'
     }
   };
 
