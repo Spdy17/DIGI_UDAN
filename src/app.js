@@ -113,7 +113,7 @@ app.get("/logout", (req, res) => {
 
 app.get("/pay", async (req, res) => {
   const options = {
-    method: 'GET',
+    method: 'POST',
     url: 'https://api-preprod.phonepe.com/apis/hermes/pg/v1/options/merchantId?includeNetBankingBanksList=true',
     headers: {
       accept: 'application/json',
