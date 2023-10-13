@@ -114,7 +114,7 @@ app.get("/logout", (req, res) => {
 app.get("/pay", async (req, res) => {
   const options = {
     method: 'POST',
-    url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
+    url: 'https://developer.phonepe.com/v1/reference/pay-api#pay-request-for-web-flow',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
