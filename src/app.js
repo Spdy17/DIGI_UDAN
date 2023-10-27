@@ -128,10 +128,10 @@ app.get("/pay", async (req, res) => {
   axios.request(options)
     .then(function (response) {
 
-    const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
-      // console.log(paymentUrl);
+      const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
+      console.log(paymentUrl);
          // res.write(paymentUrl);
-      res.redirect("https://www.webadis.com/")
+      res.redirect(paymentUrl)
 
     })
    .catch(function (error) {
