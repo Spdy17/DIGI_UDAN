@@ -131,7 +131,7 @@ app.get("/pay", async (req, res) => {
     const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
       // console.log(paymentUrl);
          // res.write(paymentUrl);
-      res.redirect("https://www.google.com/")
+      res.redirect("https://webadis.com/")
 
     })
    .catch(function (error) {
