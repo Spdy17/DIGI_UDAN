@@ -115,7 +115,7 @@ app.get("/pay", async (req, res) => {
   const options = {
     method: 'POST',
     // url: 'https://api-preprod.phonepe.com/apis/pg/v1/pay',
-    url: 'https://api-preprod.phonepe.com/apis/pg/v1/pay',
+    url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
