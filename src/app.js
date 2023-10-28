@@ -115,14 +115,14 @@ app.get("/pay", async (req, res) => {
   const options = {
     method: 'POST',
     // url: 'https://api-preprod.phonepe.com/apis/pg/v1/pay',
-    url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
+   url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-       'X-VERIFY': 'ff43de3b202cec1560fc60509f0d50e70551f68714f338c2f604f9ec32719f11'
+       'X-VERIFY': 'e2e0d37944ca466de6bae1f6393419487ec135e9f5a589f3cbb7b71ad91d1d65###1'
     },
     data: {
-      request: 'ewogICJtZXJjaGFudElkIjogIlBHVEVTVFBBWVVBVCIsCiAgIm1lcmNoYW50VHJhbnNhY3Rpb25JZCI6ICJNVDc4NTA1OTAwNjgxODgxMDQiLAogICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTIzIiwKICAiYW1vdW50IjogNTAwLAogICJyZWRpcmVjdFVybCI6ICJodHRwczovL3d3dy5kaWdpdWRhbi5jb20vIiwKICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAiY2FsbGJhY2tVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgIm1vYmlsZU51bWJlciI6ICI5OTk5OTk5OTk5IiwKICAicGF5bWVudEluc3RydW1lbnQiOiB7CiAgICAidHlwZSI6ICJQQVlfUEFHRSIKICB9Cn0='
+      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiUEdURVNUUEFZVUFUIiwKICAgICJtZXJjaGFudFRyYW5zYWN0aW9uSWQiOiAiTVQ3ODUwNTkwMDY4MTg4MTA0IiwKICAgICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTIzIiwKICAgICJhbW91bnQiOiA1MDAsCiAgICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAgICJjYWxsYmFja1VybCI6ICJodHRwczovL3d3dy5kaWdpdWRhbi5jb20vIiwKICAgICJtb2JpbGVOdW1iZXIiOiAiOTk5OTk5OTk5OSIsCiAgICAicGF5bWVudEluc3RydW1lbnQiOiB7CiAgICAgICAgInR5cGUiOiAiUEFZX1BBR0UiCiAgICB9Cn0='
     }
   };
 
@@ -130,8 +130,6 @@ app.get("/pay", async (req, res) => {
     .then(function (response) {
 
       const paymentUrl = response.data.data.instrumentResponse.redirectInfo.url;
-      console.log(paymentUrl);
-         // res.write(paymentUrl);
       res.redirect(paymentUrl)
 
     })
