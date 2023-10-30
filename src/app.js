@@ -120,10 +120,10 @@ app.get("/pay", async (req, res) => {
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-       'X-VERIFY': '51744bbe32c8688c953dd15dc1705e5ffe3d26222fd90a6af186bf0149c49384###1'
+       'X-VERIFY': ''
     },
     data: {
-      request: 'ewogICJtZXJjaGFudElkIjogIk0xSUhPVFNBT05QViIsCiAgIm1lcmNoYW50VHJhbnNhY3Rpb25JZCI6ICJNVDc4NTA1OTAwNjgxODgxMDUiLAogICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTI1IiwKICAiYW1vdW50IjogMTAwMCwKICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgInJlZGlyZWN0TW9kZSI6ICJSRURJUkVDVCIsCiAgImNhbGxiYWNrVXJsIjogImh0dHBzOi8vd3d3LmRpZ2l1ZGFuLmNvbS8iLAogICJtb2JpbGVOdW1iZXIiOiAiOTk5OTk5OTk5OSIsCiAgInBheW1lbnRJbnN0cnVtZW50IjogewogICAgInR5cGUiOiAiUEFZX1BBR0UiCiAgfQp9'
+      request: ''
     }
   };
 
