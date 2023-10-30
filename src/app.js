@@ -114,15 +114,16 @@ app.get("/logout", (req, res) => {
 app.get("/pay", async (req, res) => {
   const options = {
     method: 'POST',
-    // url: 'https://api-preprod.phonepe.com/apis/pg/v1/pay',
-   url: 'https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay',
+
+   url: 'https://api.phonepe.com/apis/hermes',
+      
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-       'X-VERIFY': 'e2e0d37944ca466de6bae1f6393419487ec135e9f5a589f3cbb7b71ad91d1d65###1'
+       'X-VERIFY': '51744bbe32c8688c953dd15dc1705e5ffe3d26222fd90a6af186bf0149c49384###1'
     },
     data: {
-      request: 'ewogICAgIm1lcmNoYW50SWQiOiAiUEdURVNUUEFZVUFUIiwKICAgICJtZXJjaGFudFRyYW5zYWN0aW9uSWQiOiAiTVQ3ODUwNTkwMDY4MTg4MTA0IiwKICAgICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTIzIiwKICAgICJhbW91bnQiOiA1MDAsCiAgICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAgICJjYWxsYmFja1VybCI6ICJodHRwczovL3d3dy5kaWdpdWRhbi5jb20vIiwKICAgICJtb2JpbGVOdW1iZXIiOiAiOTk5OTk5OTk5OSIsCiAgICAicGF5bWVudEluc3RydW1lbnQiOiB7CiAgICAgICAgInR5cGUiOiAiUEFZX1BBR0UiCiAgICB9Cn0='
+      request: 'ewogICJtZXJjaGFudElkIjogIk0xSUhPVFNBT05QViIsCiAgIm1lcmNoYW50VHJhbnNhY3Rpb25JZCI6ICJNVDc4NTA1OTAwNjgxODgxMDUiLAogICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTI1IiwKICAiYW1vdW50IjogMTAwMCwKICAicmVkaXJlY3RVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgInJlZGlyZWN0TW9kZSI6ICJSRURJUkVDVCIsCiAgImNhbGxiYWNrVXJsIjogImh0dHBzOi8vd3d3LmRpZ2l1ZGFuLmNvbS8iLAogICJtb2JpbGVOdW1iZXIiOiAiOTk5OTk5OTk5OSIsCiAgInBheW1lbnRJbnN0cnVtZW50IjogewogICAgInR5cGUiOiAiUEFZX1BBR0UiCiAgfQp9'
     }
   };
 
