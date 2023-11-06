@@ -115,12 +115,12 @@ app.get("/pay", async (req, res) => {
   const options = {
     method: 'POST',
 
-   url: 'https://api.phonepe.com/apis/hermes',
+   url: 'https://api.phonepe.com/apis/hermes/pg/v1/pay',
       
     headers: {
       accept: 'application/json',
       'Content-Type': 'application/json',
-       'X-VERIFY': 'b40401c35f7687d6fc8d8ddd84af533a0e3eba51836b805719fe30b0a66b4893###1'
+       'X-VERIFY': '403e47066cdc77b2fb6519e6eb03cb388f7a26833d53aba5b4a28c5bfadb1c26###1'
     },
     data: {
       request: 'ewogICJtZXJjaGFudElkIjogIk0xSUhPVFNBT05QViIsCiAgIm1lcmNoYW50VHJhbnNhY3Rpb25JZCI6ICJNVDc4NTA1OTAwNjgxODgxMDYiLAogICJtZXJjaGFudFVzZXJJZCI6ICJNVUlEMTI1IiwKICAiYW1vdW50IjogOTAwLAogICJyZWRpcmVjdFVybCI6ICJodHRwczovL3d3dy5kaWdpdWRhbi5jb20vIiwKICAicmVkaXJlY3RNb2RlIjogIlJFRElSRUNUIiwKICAiY2FsbGJhY2tVcmwiOiAiaHR0cHM6Ly93d3cuZGlnaXVkYW4uY29tLyIsCiAgIm1vYmlsZU51bWJlciI6ICI5OTk5OTk5OTk5IiwKICAicGF5bWVudEluc3RydW1lbnQiOiB7CiAgICAidHlwZSI6ICJQQVlfUEFHRSIKICB9Cn0='
