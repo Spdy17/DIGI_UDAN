@@ -115,7 +115,7 @@ app.get("/pay", async (req, res) => {
   const options = {
     method: 'POST',
 
-   url: 'https://api.phonepe.com/apis/hermes/pg/v1/pay',
+   url: 'https://api.phonepe.com/apis/hermes',
       
     headers: {
       accept: 'application/json',
